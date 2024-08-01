@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Game</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Add Game</h1>
+  <form id="add-game-form">
+    <label for="game-name">Название игры:</label>
+    <input type="text" id="game-name" name="game-name" required>
+
+    <label for="game-type">Тип игры:</label>
+    <div class="toggle-switch">
+      <input type="radio" id="licensed" name="game-type" value="licensed" checked>
+      <label for="licensed">Лицензия</label>
+      <input type="radio" id="pirated" name="game-type" value="pirated">
+      <label for="pirated">Пиратка</label>
+    </div>
+
+    <label for="game-link">Ссылка на игру:</label>
+    <input type="url" id="game-link" name="game-link" required>
+
+    <label for="game-description">Краткое описание:</label>
+    <textarea id="game-description" name="game-description" required></textarea>
+
+    <button type="submit">Добавить игру</button>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>
