@@ -8,7 +8,7 @@
 </head>
 <body>
   <h1>Add Game</h1>
-  <form id="add-game-form">
+  <form id="add-game-form" onsubmit="submitForm(event)">
     <label for="game-name">Название игры:</label>
     <input type="text" id="game-name" name="game-name" required>
 
@@ -29,6 +29,6 @@
     <button type="submit">Добавить игру</button>
   </form>
 
-  <script src="script.js"></script>
+  <script type="module" src="script.js"></script>
 </body>
 </html>
