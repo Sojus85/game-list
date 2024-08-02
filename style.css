@@ -1,6 +1,6 @@
 body {
   font-family: 'Roboto', sans-serif;
-  color: #E8A236;
+  color: #E8A236; /* Оставим этот цвет для текста, если вам нужен акцент */
   background-color: #212121;
   margin: 0;
   padding: 0;
@@ -12,8 +12,8 @@ body {
   height: 50px;
   line-height: 50px;
   margin: 0 auto;
-  background-color: #333;
-  color: #E8A236;
+  background-color: #333; /* Темно-серый фон */
+  color: #E8A236; /* Оставим акцентный цвет для текста */
   text-align: center;
   text-decoration: none;
   border-radius: 5px;
@@ -21,11 +21,12 @@ body {
 }
 
 .button:hover {
-  background-color: #555;
+  background-color: #555; /* Светло-серый при наведении */
 }
 
 h1 {
   text-align: center;
+  color: #E8A236; /* Оставим акцентный цвет для заголовка */
 }
 
 form {
@@ -52,8 +53,8 @@ label, input, textarea, button {
   position: fixed;
   top: 20px;
   left: 20px;
-  color: #E8A236;
-  background-color: #333;
+  color: #E8A236; /* Оставим акцентный цвет для текста */
+  background-color: #333; /* Темно-серый фон */
   padding: 10px 20px;
   border-radius: 5px;
   font-weight: bold;
@@ -63,7 +64,7 @@ label, input, textarea, button {
 .game-item {
   border-radius: 5px;
   margin: 10px auto; /* Центрирует элемент с отступом сверху и снизу */
-  background-color: #333;
+  background-color: #333; /* Темно-серый фон для элементов игры */
   padding: 10px;
   max-width: 80%; /* Максимальная ширина контейнера */
 }
@@ -76,19 +77,19 @@ label, input, textarea, button {
 .game-item th, .game-item td {
   padding: 8px;
   text-align: left;
-  border-right: 1px solid #444;
+  border-right: 1px solid #444; /* Темно-серый цвет для разделителей */
 }
 
 .game-item th {
-  background-color: #444;
-  color: #E8A236;
-  border-bottom: 1px solid #444;
+  background-color: #444; /* Темно-серый фон заголовков */
+  color: #E8A236; /* Акцентный цвет для текста */
+  border-bottom: 1px solid #444; /* Темно-серый цвет для нижней границы */
 }
 
 .game-item td {
-  background-color: #333;
-  color: #E8A236;
-  border-bottom: 1px solid #444;
+  background-color: #333; /* Темно-серый фон для ячеек */
+  color: #E8A236; /* Акцентный цвет для текста */
+  border-bottom: 1px solid #444; /* Темно-серый цвет для нижней границы */
 }
 
 .game-item td:first-child {
@@ -99,11 +100,120 @@ label, input, textarea, button {
   border-right: none; /* Убирает границу справа у последнего столбца */
 }
 
+/* Ссылки в игре */
 .game-item a {
-  color: #E8A236;
-  text-decoration: none;
+  color: #E8A236; /* Оставляем акцентный цвет для ссылок */
+  text-decoration: underline; /* Подчёркивание ссылок */
 }
 
 .game-item a:hover {
-  text-decoration: underline;
+  text-decoration: none; /* Убираем подчёркивание при наведении */
+  color: #E8A236; /* Оставляем акцентный цвет при наведении */
 }
+
+/* Ссылки в таблице */
+.game-table a {
+  color: #E8A236; /* Оставляем акцентный цвет для ссылок */
+  text-decoration: underline; /* Подчёркивание ссылок */
+}
+
+.game-table a:hover {
+  text-decoration: none; /* Убираем подчёркивание при наведении */
+  color: #E8A236; /* Оставляем акцентный цвет при наведении */
+}
+
+
+/* Общие стили для таблицы и ячеек */
+.game-table {
+  width: 60%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: #333; /* Темно-серый фон таблицы */
+}
+
+.game-table th, .game-table td {
+  padding: 10px;
+  border: 1px solid #444; /* Темно-серый цвет для границ таблицы */
+  text-align: left;
+}
+
+.game-table th {
+  background-color: #444; /* Темно-серый фон заголовков */
+  color: #E8A236; /* Акцентный цвет для текста */
+}
+
+.game-table td {
+  background-color: #333; /* Темно-серый фон для ячеек */
+  color: #E8A236; /* Акцентный цвет для текста */
+}
+
+.game-table tr:nth-child(even) td {
+  background-color: #444; /* Темно-серый фон для четных строк */
+}
+
+.game-table td button {
+  background-color: #E8A236; /* Акцентный цвет для кнопок */
+  color: #fff; /* Белый текст на кнопках */
+  border: none;
+  padding: 5px 10px;
+  margin: 2px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.game-table td button:hover {
+  background-color: #c78a2c; /* Более светлый акцентный цвет при наведении */
+}
+
+/* Модальные окна */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4); /* Полупрозрачный черный фон */
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #333; /* Темно-серый фон для модального окна */
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #444; /* Темно-серый цвет для границы */
+  width: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+.close-button {
+  color: #E8A236; /* Акцентный цвет для крестика закрытия */
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: #fff; /* Белый цвет при наведении */
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-content button {
+  background-color: #E8A236; /* Акцентный цвет для кнопок в модальном окне */
+  color: #fff; /* Белый текст на кнопках */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.modal-content button:hover {
+  background-color: #c78a2c; /* Более светлый акцентный цвет при наведении */
+}
+

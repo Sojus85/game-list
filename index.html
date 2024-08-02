@@ -9,8 +9,58 @@
 <body>
     <h1>Welcome to My Game List</h1>
     <a href="add-game.html" class="button">Ткни сюда для добавления игры</a>
-    <div id="game-list" class="game-list">
-        <!-- Игры будут отображаться здесь -->
+    
+    <table id="game-list" class="game-table">
+        <thead>
+            <tr>
+                <th></th> <!-- Column for action buttons -->
+                <th>Название</th>
+                <th>Тип</th>
+                <th>Ссылка</th>
+                <th>Описание</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Игры будут отображаться здесь -->
+        </tbody>
+    </table>
+
+    <!-- Модальное окно редактирования -->
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Редактировать игру</h2>
+            <form id="edit-form">
+                <input type="hidden" id="edit-game-id">
+                <label for="edit-game-name">Название:</label>
+                <input type="text" id="edit-game-name" name="edit-game-name" required>
+
+                <label for="edit-game-type">Тип:</label>
+                <select id="edit-game-type" name="edit-game-type">
+                    <option value="licensed">Лицензия</option>
+                    <option value="pirated">Пиратка</option>
+                </select>
+
+                <label for="edit-game-link">Ссылка:</label>
+                <input type="url" id="edit-game-link" name="edit-game-link" required>
+
+                <label for="edit-game-description">Описание:</label>
+                <textarea id="edit-game-description" name="edit-game-description" required></textarea>
+
+                <button type="submit">Сохранить</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Модальное окно удаления -->
+    <div id="delete-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Удалить игру</h2>
+            <p>Вы уверены, что хотите удалить эту игру?</p>
+            <button id="confirm-delete">Удалить</button>
+            <button id="cancel-delete">Отмена</button>
+        </div>
     </div>
 
     <script type="module" src="displayGames.js"></script>
