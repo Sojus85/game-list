@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Game List</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Game List</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Welcome to My Game List</h1>
-  <a href="add-game.html" class="button">Ткни сюда для добавления игры</a>
-  <ul id="games-list"></ul>
-  <script type="module" src="script.js"></script>
+    <h1>Welcome to My Game List</h1>
+    <a href="add-game.html" class="button">Ткни сюда для добавления игры</a>
+    <div id="game-list" class="game-list">
+        <!-- Игры будут отображаться здесь -->
+    </div>
+
+    <script type="module" src="displayGames.js"></script>
 </body>
 </html>
