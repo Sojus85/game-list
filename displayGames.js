@@ -117,6 +117,10 @@ document.getElementById('confirm-delete').addEventListener('click', () => {
 });
 
 // Close the modals
+document.getElementById('cancel-delete').addEventListener('click', () => {
+    document.getElementById('delete-modal').style.display = 'none';
+});
+
 document.querySelectorAll('.close-button').forEach(button => {
     button.addEventListener('click', () => {
         document.querySelectorAll('.modal').forEach(modal => {
